@@ -32,3 +32,6 @@ rosrun reconocimiento_cv image_detector.py
 ```
 
 ## Parte 3: SLAM
+
+
+PATACON DE PRUEBA
