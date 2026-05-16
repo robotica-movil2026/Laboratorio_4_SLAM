@@ -12,7 +12,6 @@ En otra terminal podemos ver las lecturas del sensor con:
 ```bash
 rostopic echo /IMU_ROS
 ```
-z
 
 ## Parte 2: Camara
 PAra el uso de la camara en ubuntu 20.04, se uso el script recomendado para hacer reconocimientos de movimiento y contorno, este se encuentra en la carpeta [Nodos](Nodos/) en el script **Image_detector.py**, y el modo de uso es el siguiente:
