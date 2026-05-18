@@ -1,6 +1,6 @@
 # Laboratorio 4 Sensores y SLAM:
 
-## Parte 1: Manejo de Sensores y microcontroladores
+# Parte 1: Manejo de Sensores y microcontroladores
 
  En la carpeta [Microcontrolador](Microcontrolador/) podemos encontrar el codigo en arduino para el uso de una imu **MPU6050** mediante ROS y comunicacion serial, este codigo se encarga de tomar las lecturas del sensor y enviarlas a un topico de ROS llamado **IMU_ROS**. Para ejecutarlo es necesario tener instalado el paquete **rosserial_arduino** en la carpeta del **lib** del workspace. Ademas de configurar el puerto com de la placa y cargar el codigo en el microcontrolador.
 
@@ -13,7 +13,7 @@ En otra terminal podemos ver las lecturas del sensor con:
 rostopic echo /IMU_ROS
 ```
 
-## Parte 2: Camara
+# Parte 2: Camara
 PAra el uso de la camara en ubuntu 20.04, se uso el script recomendado para hacer reconocimientos de movimiento y contorno, este se encuentra en la carpeta [Nodos](Nodos/) en el script **Image_detector.py**, y el modo de uso es el siguiente:
 
 - Terminal 1:
@@ -135,14 +135,14 @@ $$
 
 ### Resultados numéricos
 
-Error medio  : 2.02 cm
-RMSE         : 3.58 cm
-Error máximo : 21.38 cm
+- Error medio  : 2.02 cm
+- RMSE         : 3.58 cm
+- Error máximo : 21.38 cm
 
 
 ## Conclusiones
 
-Los resultados muestran que la reconstrucción manual logra aproximarse correctamente a la geometría detectada por el sensor LIDAR. Las diferencias observadas se deben principalmente a:
+Los resultados muestran que la geometría detectada por el sensor LIDAR logra aproximarse correctamente a la reconstrucción manual. Las diferencias observadas se deben principalmente a:
 
 - Ruido propio del sensor.
 - Errores de medición manual.
