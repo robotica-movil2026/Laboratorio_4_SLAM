@@ -56,7 +56,7 @@ rosrun tf static_transform_publisher 0 0 0 0 0 0 baselink laser 100
 rviz
 ```
 
-[![LIDAR](https://img.youtube.com/vi/umPsq3o_AxQ/0.jpg)](https://www.youtube.com/watch?v=umPsq3o_AxQ)
+[![LIDAR](https://img.youtube.com/vi/pYz689sKs1k/0.jpg)](https://www.youtube.com/watch?v=pYz689sKs1k)
 
 ## Comparación entre medición manual y escaneo LIDAR
 
@@ -150,13 +150,13 @@ $$
 
 [Video demostrativo SLAM](./FotosLIDAR/hector_slam.mkv)
 
-[![IMU](https://img.youtube.com/vi/umPsq3o_AxQ/0.jpg)](https://www.youtube.com/watch?v=umPsq3o_AxQ)
+[![Hector_SLAM](https://img.youtube.com/vi/umPsq3o_AxQ/0.jpg)](https://www.youtube.com/watch?v=umPsq3o_AxQ)
 
-[![IMU](https://img.youtube.com/vi/umPsq3o_AxQ/0.jpg)](https://www.youtube.com/watch?v=umPsq3o_AxQ)
+[![Hector_SLAM](https://img.youtube.com/vi/umPsq3o_AxQ/0.jpg)](https://www.youtube.com/watch?v=umPsq3o_AxQ)
 
-[![IMU](https://img.youtube.com/vi/umPsq3o_AxQ/0.jpg)](https://www.youtube.com/watch?v=umPsq3o_AxQ)
+[![Hector_SLAM](https://img.youtube.com/vi/umPsq3o_AxQ/0.jpg)](https://www.youtube.com/watch?v=umPsq3o_AxQ)
 
-[![IMU](https://img.youtube.com/vi/umPsq3o_AxQ/0.jpg)](https://www.youtube.com/watch?v=umPsq3o_AxQ)
+[![Hector_SLAM](https://img.youtube.com/vi/umPsq3o_AxQ/0.jpg)](https://www.youtube.com/watch?v=umPsq3o_AxQ)
 ## Conclusiones
 
 Los resultados muestran que la geometría detectada por el sensor LIDAR logra aproximarse correctamente a la reconstrucción manual. Las diferencias observadas se deben principalmente a:
