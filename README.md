@@ -152,8 +152,6 @@ $$
 
 # Parte 4 : SLAM
 
-# Preguntas teóricas
-
 ## ¿Cuál es la función principal del paquete `hector_slam` dentro del ecosistema ROS?
 
 El paquete `hector_slam` es una implementación de SLAM (*Simultaneous Localization and Mapping*) para ROS cuya función principal es permitir que un robot construya un mapa 2D del entorno mientras estima simultáneamente su posición dentro de él utilizando información proveniente de un sensor LIDAR. `hector_slam` procesa los datos del escáner láser y realiza coincidencia entre escaneos consecutivos (*scan matching*) para estimar el movimiento del robot y actualizar el mapa del entorno.
