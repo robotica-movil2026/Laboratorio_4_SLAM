@@ -31,7 +31,21 @@ rosrun usb_cam usb_cam_node
 rosrun reconocimiento_cv image_detector.py
 ```
 
-## Parte 3: SLAM
+## Parte 3: LIDAR
+
+La tecnología LiDAR (Light Detection and Ranging) es un sistema de medición remota que utiliza pulsos de luz láser para calcular distancias y crear mapas tridimensionales muy precisos del entorno. Un sensor LiDAR emite miles o millones de pulsos láser por segundo hacia objetos y superficies. Luego mide el tiempo que tarda cada pulso en regresar después de reflejarse. Con millones de mediciones, el sistema construye una nube de puntos 3D extremadamente detallada.
+
+Para visualizar el mapeo del lidar, clonamos el repo de las librerias en el workspace y lanzamos los siguientes comandos: 
+```bash
+catkin_make
+source devel/setup.bash
+roslaunch rplidar_ros rplidar_c1.launch
+```
+Para inicializar la referencia del lidar en el espacio y lanzar el visualizador aplicamos los siguientes comandos:
+```bash
+rosrun tf static_transform_publisher 0 0 0 0 0 0 baselink laser 100
+rviz
+```
 
 
 # Comparación entre medición manual y escaneo LIDAR
