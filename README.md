@@ -12,6 +12,7 @@ En otra terminal podemos ver las lecturas del sensor con:
 ```bash
 rostopic echo /IMU_ROS
 ```
+
 [Video demostrativo IMU](./FotosLIDAR/imu.mkv)
 
 
@@ -55,13 +56,16 @@ Para inicializar la referencia del lidar en el espacio y lanzar el visualizador 
 rosrun tf static_transform_publisher 0 0 0 0 0 0 baselink laser 100
 rviz
 ```
-[Lidar](./FotosLIDAR/3.jpeg)
+[Montaje Lidar](./FotosLIDAR/3.jpeg)
+
 [![LIDAR](https://img.youtube.com/vi/pYz689sKs1k/0.jpg)](https://www.youtube.com/watch?v=pYz689sKs1k)
 
 Para capturar y graficar los datos del lidar se creó un script en python que los guarda en un .csv y los grafica con matplotlib. 
 
 [Script de captura](./NodoCSVLidar.py)
+
 [CSV de datos](./datos_lidar.csv)
+
 ## Comparación entre medición manual y escaneo LIDAR
 
 Este proyecto compara una reconstrucción geométrica manual del entorno contra un escaneo 2D obtenido mediante un sensor LIDAR.
