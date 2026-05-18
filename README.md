@@ -13,6 +13,11 @@ En otra terminal podemos ver las lecturas del sensor con:
 rostopic echo /IMU_ROS
 ```
 [Video demostrativo IMU](./FotosLIDAR/imu.mkv)
+
+
+[![IMU](https://img.youtube.com/vi/YRaFXCiuLRY/0.jpg)](https://www.youtube.com/watch?v=YRaFXCiuLRY)
+
+
 # Parte 2: Camara
 PAra el uso de la camara en ubuntu 20.04, se uso el script recomendado para hacer reconocimientos de movimiento y contorno, este se encuentra en la carpeta [Nodos](Nodos/) en el script **Image_detector.py**, y el modo de uso es el siguiente:
 
