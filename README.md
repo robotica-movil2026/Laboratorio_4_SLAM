@@ -125,9 +125,9 @@ $$
 
 # Resultados numéricos
 
-Error medio : XX m
-RMSE         : XX m
-Error máximo : XX m
+Error medio  : 2.02 cm
+RMSE         : 3.58 cm
+Error máximo : 21.38 cm
 
 
 # Conclusiones
