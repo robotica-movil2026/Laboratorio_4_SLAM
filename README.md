@@ -159,6 +159,20 @@ $$
 e_{max} = \max(e_i)
 $$
 
+### Error porcentual
+
+El error porcentual se calculó para cada punto del escaneo LIDAR utilizando la relación entre el error geométrico obtenido y la distancia medida por el sensor:
+
+$$
+\text{Error porcentual}_i = \frac{e_i}{d_i}\times 100
+$$
+
+donde:
+
+- $e_i$ corresponde a la distancia mínima entre el punto LIDAR y el Modelo Manual.
+- $d_i$ corresponde a la distancia medida originalmente por el LIDAR.
+
+Finalmente, se calculó el promedio de todos los errores porcentuales para obtener una métrica global de precisión del modelo reconstruido.
 
 ## Resultados
 
@@ -176,8 +190,8 @@ $$
 - Error medio:  2.02 cm
 - RMSE:         3.58 cm
 - Error máximo: 21.38 cm
-
-
+- Error porcentual medio: 9.17%
+- Error porcentual maximo: 142.07%
 
 
 
@@ -232,5 +246,3 @@ Los resultados muestran que la geometría detectada por el sensor LIDAR logra ap
 - Errores de medición manual.
 - Reflexiones y dispersión del LIDAR.
 - Pequeñas desviaciones angulares acumuladas.
-
-El RMSE obtenido permite cuantificar objetivamente la calidad de la reconstrucción y validar la consistencia geométrica del entorno modelado.
