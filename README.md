@@ -102,8 +102,6 @@ $$
 \bar e = \frac{1}{N}\sum_{i=1}^{N} e_i
 $$
 
-
-
 ### RMSE (Root Mean Square Error)
 
 Penaliza más fuertemente los errores grandes y es una métrica común en sistemas de mapeo y SLAM.
@@ -111,7 +109,6 @@ Penaliza más fuertemente los errores grandes y es una métrica común en sistem
 $$
 RMSE = \sqrt{\frac{1}{N}\sum_{i=1}^{N} e_i^2}
 $$
-
 
 ### Error máximo
 
@@ -135,9 +132,9 @@ $$
 
 ### Resultados numéricos
 
-- Error medio  : 2.02 cm
-- RMSE         : 3.58 cm
-- Error máximo : 21.38 cm
+- Error medio:  2.02 cm
+- RMSE:         3.58 cm
+- Error máximo: 21.38 cm
 
 
 ## Conclusiones
