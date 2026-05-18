@@ -31,7 +31,7 @@ rosrun usb_cam usb_cam_node
 rosrun reconocimiento_cv image_detector.py
 ```
 
-## Parte 3: LIDAR
+# Parte 3: LIDAR
 
 La tecnología LiDAR (Light Detection and Ranging) es un sistema de medición remota que utiliza pulsos de luz láser para calcular distancias y crear mapas tridimensionales muy precisos del entorno. Un sensor LiDAR emite miles o millones de pulsos láser por segundo hacia objetos y superficies. Luego mide el tiempo que tarda cada pulso en regresar después de reflejarse. Con millones de mediciones, el sistema construye una nube de puntos 3D extremadamente detallada.
 
@@ -48,7 +48,7 @@ rviz
 ```
 
 
-# Comparación entre medición manual y escaneo LIDAR
+## Comparación entre medición manual y escaneo LIDAR
 
 Este proyecto compara una reconstrucción geométrica manual del entorno contra un escaneo 2D obtenido mediante un sensor LIDAR.
 
@@ -59,10 +59,10 @@ La reconstrucción manual se realizó utilizando:
 - Reconstrucción polar-cartesiana mediante ley de cosenos.
 - Ajuste angular manual para alinear ambas trayectorias.
 
-El objetivo fue evaluar qué tan cercana es la geometría reconstruida respecto a la nube de puntos real obtenida por el sensor.
+El objetivo fue evaluar qué tan cercana es la geometría reconstruida respecto a la nube de puntos obtenida por el sensor.
 
 
-# Reconstrucción geométrica
+### Reconstrucción geométrica
 
 Para cada pared se calculó el ángulo entre esquinas consecutivas utilizando la ley de cosenos:
 
@@ -90,11 +90,11 @@ Finalmente, se aplicó una rotación global para alinear el modelo manual con el
 
 
 
-# Métricas de error
+### Métricas de error
 
 Para evaluar la similitud entre ambas trayectorias se calculó la distancia mínima entre cada punto del LIDAR y el polígono reconstruido manualmente.
 
-## Error medio
+### Error medio
 
 Representa la distancia promedio entre la nube de puntos y el modelo geométrico.
 
@@ -104,7 +104,7 @@ $$
 
 
 
-## RMSE (Root Mean Square Error)
+### RMSE (Root Mean Square Error)
 
 Penaliza más fuertemente los errores grandes y es una métrica común en sistemas de mapeo y SLAM.
 
@@ -113,7 +113,7 @@ RMSE = \sqrt{\frac{1}{N}\sum_{i=1}^{N} e_i^2}
 $$
 
 
-## Error máximo
+### Error máximo
 
 Corresponde al peor caso detectado entre el escaneo y la reconstrucción manual.
 
@@ -122,29 +122,25 @@ e_{max} = \max(e_i)
 $$
 
 
-# Resultados
+## Resultados
 
-## Comparación entre trayectoria manual y LIDAR
+### Comparación entre trayectoria manual y LIDAR
 
-![Comparación](FotosLIDAR\Trayectorias.png)
-
-
-## Mapa de error
-
-```md
-![Mapa de error](FotosLIDAR\Error.png)
-```
+![Comparación](FotosLIDAR/Trayectorias.png)
 
 
+### Mapa de error
 
-# Resultados numéricos
+![Mapa de error](FotosLIDAR/Error.png)
+
+### Resultados numéricos
 
 Error medio  : 2.02 cm
 RMSE         : 3.58 cm
 Error máximo : 21.38 cm
 
 
-# Conclusiones
+## Conclusiones
 
 Los resultados muestran que la reconstrucción manual logra aproximarse correctamente a la geometría detectada por el sensor LIDAR. Las diferencias observadas se deben principalmente a:
 
