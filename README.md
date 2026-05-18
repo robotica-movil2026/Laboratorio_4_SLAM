@@ -150,13 +150,14 @@ $$
 
 [Video demostrativo SLAM](./FotosLIDAR/hector_slam.mkv)
 
-[![Hector_SLAM](https://img.youtube.com/vi/umPsq3o_AxQ/0.jpg)](https://www.youtube.com/watch?v=umPsq3o_AxQ)
+[![Hector_SLAM_1](https://img.youtube.com/vi/lu3zlm2ydQ8/0.jpg)](https://www.youtube.com/watch?v=lu3zlm2ydQ8)
 
-[![Hector_SLAM](https://img.youtube.com/vi/umPsq3o_AxQ/0.jpg)](https://www.youtube.com/watch?v=umPsq3o_AxQ)
+[![Hector_SLAM_2](https://img.youtube.com/vi/6ktqQ2gvmaI/0.jpg)](https://www.youtube.com/watch?v=6ktqQ2gvmaI)
 
-[![Hector_SLAM](https://img.youtube.com/vi/umPsq3o_AxQ/0.jpg)](https://www.youtube.com/watch?v=umPsq3o_AxQ)
+[![Hector_SLAM_3](https://img.youtube.com/vi/gr5vpYPt6pk/0.jpg)](https://www.youtube.com/watch?v=gr5vpYPt6pk)
 
-[![Hector_SLAM](https://img.youtube.com/vi/umPsq3o_AxQ/0.jpg)](https://www.youtube.com/watch?v=umPsq3o_AxQ)
+[![Hector_SLAM_4](https://img.youtube.com/vi/EUCxyGSmOzc/0.jpg)](https://www.youtube.com/watch?v=EUCxyGSmOzc)
+
 ## Conclusiones
 
 Los resultados muestran que la geometría detectada por el sensor LIDAR logra aproximarse correctamente a la reconstrucción manual. Las diferencias observadas se deben principalmente a:
