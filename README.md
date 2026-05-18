@@ -146,7 +146,43 @@ $$
 - RMSE:         3.58 cm
 - Error máximo: 21.38 cm
 
+
+
+
+
 # Parte 4 : SLAM
+
+# Preguntas teóricas
+
+## ¿Cuál es la función principal del paquete `hector_slam` dentro del ecosistema ROS?
+
+El paquete `hector_slam` es una implementación de SLAM (*Simultaneous Localization and Mapping*) para ROS cuya función principal es permitir que un robot construya un mapa 2D del entorno mientras estima simultáneamente su posición dentro de él utilizando información proveniente de un sensor LIDAR. `hector_slam` procesa los datos del escáner láser y realiza coincidencia entre escaneos consecutivos (*scan matching*) para estimar el movimiento del robot y actualizar el mapa del entorno.
+
+Dentro del ecosistema ROS, `hector_slam` se encarga de:
+
+- Recibir datos del sensor LIDAR.
+- Estimar la pose del robot.
+- Construir mapas 2D de ocupación.
+- Publicar transformaciones (`tf`) entre sistemas de referencia.
+- Integrarse con herramientas de visualización como RViz.
+
+El paquete es especialmente útil con sensores láser y robots que no disponen de una odometría confiable.
+
+## ¿Cómo gestiona el movimiento del robot? ¿Utiliza datos de odometría o se basa únicamente en el escaneo del LIDAR?
+
+Una de las principales características de `hector_slam` es que puede funcionar sin utilizar datos de odometría. A diferencia de otros algoritmos SLAM que dependen fuertemente de encoders o sensores de movimiento, `hector_slam` se basa principalmente en los datos del sensor LIDAR.
+
+El paquete utiliza una técnica denominada *scan matching*, en la cual compara escaneos consecutivos del entorno para estimar el desplazamiento y la rotación del robot. A partir de las diferencias observadas entre los escaneos láser, el algoritmo calcula la nueva pose del robot y actualiza el mapa generado.
+
+El proceso general consiste en:
+
+1. Obtener un escaneo láser del entorno.
+2. Compararlo con el mapa previamente construido.
+3. Estimar la transformación más probable entre escaneos.
+4. Actualizar la posición estimada del robot.
+5. Incorporar nueva información al mapa de ocupación.
+
+Aunque `hector_slam` puede integrarse con odometría, su funcionamiento principal está diseñado para depender principalmente del LIDAR. Esto lo hace especialmente útil en robots donde la odometría es limitada, imprecisa o inexistente.
 
 [Video demostrativo SLAM](./FotosLIDAR/hector_slam.mkv)
 
@@ -157,6 +193,7 @@ $$
 [![Hector_SLAM_3](https://img.youtube.com/vi/gr5vpYPt6pk/0.jpg)](https://www.youtube.com/watch?v=gr5vpYPt6pk)
 
 [![Hector_SLAM_4](https://img.youtube.com/vi/EUCxyGSmOzc/0.jpg)](https://www.youtube.com/watch?v=EUCxyGSmOzc)
+
 
 ## Conclusiones
 
