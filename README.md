@@ -71,8 +71,39 @@ La reconstrucción manual se realizó utilizando:
 
 El objetivo fue evaluar qué tan cercana es la geometría reconstruida respecto a la nube de puntos obtenida por el sensor.
 
+### Reconstrucción geométrica de los datos del LIDAR
 
-### Reconstrucción geométrica
+Los datos del sensor LIDAR fueron obtenidos desde el tópico `/scan` en ROS utilizando mensajes del tipo `LaserScan`. Cada medición contiene un conjunto de distancias radiales (`ranges`) asociadas a diferentes ángulos del escáner.
+
+Para cada rayo detectado:
+
+1. Se verifica que la distancia esté dentro del rango válido del sensor.
+2. Se calcula el ángulo correspondiente al índice del rayo.
+3. Se realiza la conversión de coordenadas polares a cartesianas.
+4. Finalmente, los datos se almacenan en un archivo CSV para su posterior análisis en MATLAB.
+
+La conversión utilizada fue:
+
+$$
+\theta = \theta_{inicial} + (i \cdot \Delta\theta)
+$$
+
+$$
+x = r\cos(\theta)
+$$
+
+$$
+y = r\sin(\theta)
+$$
+
+donde:
+
+- $i$ corresponde al 'rayo' actual del LIDAR.
+- $r$ corresponde a la distancia medida por el LIDAR.
+- $\theta$ corresponde al ángulo del rayo láser.
+- $\Delta\theta$ corresponde al cambio o incremento del ángulo.
+
+### Reconstrucción geométrica del modelo manual
 
 Para cada pared se calculó el ángulo entre esquinas consecutivas utilizando la ley de cosenos:
 
