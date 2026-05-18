@@ -139,6 +139,10 @@ $$
 - RMSE:         3.58 cm
 - Error máximo: 21.38 cm
 
+# Parte 4 : SLAM
+
+[Video demostrativo SLAM](./FotosLIDAR/hector_slam.mkv)
+
 
 ## Conclusiones
 
